@@ -1,0 +1,480 @@
+<!doctype html>
+<html>
+<head>
+    <style>
+        .box {
+            width: 100%;
+            height: 80px;
+            background-color: rgb(255, 255, 255);
+            display: flex;
+            align-items: center; /* Center vertically */
+            padding: 0 20px; /* Add padding for spacing */
+            box-sizing: border-box; /* Ensure padding doesn't affect width */
+        }
+        .box p {
+            margin: 0; /* Remove default margin */
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            font-size: 35px;
+            color: rgb(0, 0, 184);
+            margin-left: 30px; /* Space between text and search box */
+        }
+        .box a {
+            text-decoration: none; /* Remove underline from link */
+            color: rgb(0, 0, 184); /* Ensure link color matches text color */
+        }
+        .box2 {
+            width: 700px;
+            height: 45px;
+            background-color: rgb(0, 0, 0);
+            border-radius: 2px;
+            display: flex;
+            align-items: center;
+            margin-left: 30px;
+        }
+        .box2 input {
+            width: 100%;
+            height: 100%;
+            font-size: 20px; /* Adjust font size for better fit */
+            border: none; /* Remove border */
+            padding: 0 10px; /* Add padding inside the input */
+            box-sizing: border-box; /* Ensure padding is included in width/height */
+            background-color: rgb(240, 240, 240);
+        }
+        .log a{
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+            margin-left: 5px;
+        }
+        .car{
+            margin-left: 20px;
+            font-size: 20px;
+        }
+        .cart select {
+            border: none;
+            margin-left: 30px;
+            font-size: 16px;
+            padding: 5px;
+            background-color: rgb(240, 240, 240);
+            border: none;
+        }
+        .n {
+            flex-grow: 1;
+        }
+        .sec2 {
+            width: 100%;
+            height: 150px;
+            background-color: white;
+        }
+        .sec2 img {
+            width: 90px;
+            height: 90px;
+            padding: 9px;
+            margin-left: 40px;
+        }
+        .sec2 td {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 16px;
+            text-align: center; /* Center text in cells */
+        }
+        .sec2 select {
+            border: none;
+            font-size: 16px;
+            background-color: rgb(255, 255, 255);
+            display: block; /* Change to block to use margin for centering */
+            margin: 0 auto; /* Center the select box */
+        }
+        .slide img{
+            width: 100%;
+        }
+        .text p{
+            font-size: 30px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+        }
+        .item{
+            width: 100%;
+            height: 350px;
+            background-color: white;
+        }
+        .item img{
+            width: 299px;
+            height: 300px;
+            margin-left: 0px;
+            display: flex;
+            margin-top: 0px;
+        }
+        .item td{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 20px;
+            text-align: center;
+            font-weight: bold;
+        }
+        .text2 p{
+            font-size: 30px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+        }
+        .item2{
+            width: 100%;
+            height: 350px;
+            background-color: white;
+        }
+        .item2 img{
+            margin-left: 0px;
+            display: flex;
+            margin-top: 0px;
+        }
+        .item2 td{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 20px;
+            text-align: center;
+            font-weight: bold;
+        }
+        .text3 p{
+            font-size: 30px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+        }
+        .fash{
+            width: 100%;
+            height: 350px;
+            background-color: white;
+        }
+        .fash img{
+            width: 289px;
+            height: 300px;
+            margin-left: 0px;
+            display: flex;
+            margin-top: 0px;
+        }
+        .fash td{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 20px;
+            text-align: center;
+            font-weight: bold
+        }
+        .text4 p{
+            font-size: 30px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+        }
+        .fash2{
+            width: 100%;
+            height: 350px;
+            background-color: white;
+        }
+        .fash2 img{
+            width: 289px;
+            height: 300px;
+            margin-left: 0px;
+            display: flex;
+            margin-top: 0px;
+        }
+        .fash2 td{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 20px;
+            text-align: center;
+            font-weight: bold
+        }
+        .ftext{
+            font-family: Arial, Helvetica, sans-serif;
+            color: rgb(114, 114, 114);
+        }
+        .footer {
+            width: 100%;
+            background-color: rgb(0, 0, 0);
+            padding: 20px 0;
+            display: flex;
+            flex-direction: column; /* Change to column layout for footer */
+            align-items: flex-start; /* Aligns items to the left */
+            padding-left: 20px; /* Optional padding */
+        }
+        .footer th, .footer td {
+            font-family: Arial, Helvetica, sans-serif;
+            color: rgb(145, 145, 145);
+            padding: 10px;
+            border: 0px solid rgb(145, 145, 145); /* Added border for visibility */
+        }
+        .footer table {
+            margin: 0; /* Remove margin to align with the footer */
+            table-layout: fixed; /* Ensure fixed layout for columns */
+            width: 99%; /* Full width of the footer */
+        }
+        hr {
+            width: 100%; /* Full width */
+            border: 1px solid rgb(145, 145, 145); /* Style the line */
+            margin: 20px 0; /* Spacing above and below the line */
+        }
+        .vl {
+            display: flex;
+            align-items: left;
+  border-left: 6px solid green;
+  height: 500px;
+}
+    </style>
+</head>
+<body bgcolor="#dedede">
+    <section>
+        <div class="box">
+            <p><a target="_blank" href="https://www.flipkart.com/">Flipkart</a></p>
+            <div class="box2">
+                <input placeholder="Search for Products, Brands, and More" type="text">
+            </div>
+            <div class="log">
+                <a target="_blank" href="file:///D:/Web%20designing/log.html">Login</a>
+                
+            </div>
+            <div class="car">
+                <select>
+                    <option>Cart</option>
+                    <option>My Profile</option>
+                    <option>Flipkart Cart Zone</option>
+                    <option>Orders</option>
+                    <option>Wishlist</option>
+                    <option>Rewards</option>
+                    <option>Gift Cards</option>
+                </select>
+            </div>
+            <div class="n">
+                <p><a target="_blank" href="https://seller.flipkart.com/sell-online?utm_source=fkwebsite&utm_medium=websitedirect">Become a Seller</a></p>
+            </div>
+        </div>
+    </section><br>
+    <section>
+        <div class="sec2">
+            <table border="0" style="width: 100%;">
+                <tr>
+                    <td><a target="_blank" href="https://www.flipkart.com/search?q=grocery+products&sid=eat%2Cymr&as=on&as-show=on&otracker=AS_QueryStore_OrganicAutoSuggest_1_3_na_na_na&otracker1=AS_QueryStore_OrganicAutoSuggest_1_3_na_na_na&as-pos=1&as-type=RECENT&suggestionId=grocery+products%7CFood+Combo&requestId=9302f634-9ea7-47e5-88a2-4f9019370e34&as-backfill=on"><img src="D:\web image\1.png" alt="Grocery"></a></td>
+                    <td><a target="_blank" href="https://www.flipkart.com/search?q=phone&otracker=search&otracker1=search&marketplace=FLIPKART&as-show=on&as=off"><img src="D:\web image\2.png" alt="Mobiles"></a></td>
+                    <td><a target="_blank" href="https://www.flipkart.com/search?q=fashion&otracker=search&otracker1=search&marketplace=FLIPKART&as-show=on&as=off"><img src="D:\web image\3.png" alt="Fashion"></a></td>
+                    <td><a target="_blank" href="https://www.flipkart.com/search?q=Electronics&otracker=search&otracker1=search&marketplace=FLIPKART&as-show=on&as=off"><img src="D:\web image\4.png" alt="Electronics"></a></td>
+                    <td><a target="_blank" href="https://www.flipkart.com/search?q=furniture&otracker=search&otracker1=search&marketplace=FLIPKART&as-show=on&as=off"><img src="D:\web image\5.png" alt="Home & Furniture"></a></td>
+                    <td><a target="_blank" href="https://www.flipkart.com/search?q=applinces&otracker=search&otracker1=search&marketplace=FLIPKART&as-show=on&as=off"><img src="D:\web image\6.png" alt="Appliances"></a></td>
+                    <td><a target="_blank" href="https://www.flipkart.com/search?q=applinces&otracker=search&otracker1=search&marketplace=FLIPKART&as-show=on&as=off"><img src="D:\web image\7.png" alt="Flight Bookings"></a></td>
+                    <td><a target="_blank" href="https://www.flipkart.com/tbbd-bgm-sale-24-store?fm=neo%2Fmerchandising&iid=M_6eb86b7d-2b1c-4a4f-8b03-bda57d8afc1b_1_KUZ8W60OFFMO_MC.3HG9V6MXYB5P&otracker=hp_rich_navigation_6_1.navigationCard.RICH_NAVIGATION_Beauty_3HG9V6MXYB5P&otracker1=hp_rich_navigation_PINNED_neo%2Fmerchandising_NA_NAV_EXPANDABLE_navigationCard_cc_6_L0_view-all&cid=3HG9V6MXYB5P"><img src="D:\web image\8.png" alt="Beauty, Toys & More"></a></td>
+                    <td><a target="_blank" href="https://www.flipkart.com/search?q=bikes&otracker=search&otracker1=search&marketplace=FLIPKART&as-show=on&as=off"><img src="D:\web image\9.png" alt="Two Wheelers"></a></td>
+                </tr>
+                <tr>
+                    <td>Grocery</td>
+                    <td>Mobiles</td>
+                    <td>
+                        <select>
+                            <option>Fashion</option>
+                            <option><b>Men's Top Wear</b></option>
+                            <option>Men's Bottom Wear</option>
+                            <option>Women Ethnic</option>
+                            <option>Men's Footwear</option>
+                            <option>Women's Footwear</option>
+                            <option>Watches and Accessories</option>
+                            <option>Women Western</option>
+                            <option>Bags, Suitcase & Luggage</option>
+                            <option>Kids</option>
+                            <option>Essentials</option>
+                            <option>Winter</option>
+                            <optgroup label="More in Men's Top Wear">
+                                <option>All</option>
+                                <option>Men's T-Shirts</option>
+                                <option>Men's Casual Shirts</option>
+                                <option>Men's Formal Shirts</option>
+                                <option>Men's Kurtas</option>
+                                <option>Men's Ethnic Sets</option>
+                                <option>Men's Blazers</option>
+                                <option>Men's Raincoat</option>
+                                <option>Men's Windbreakers</option>
+                                <option>Men's Suit</option>
+                                <option>Men's Fabrics</option>
+                            </optgroup>
+                        </select>
+                    </td>
+                    <td>Electronics</td>
+                    <td>Home & Furniture</td>
+                    <td>Appliances</td>
+                    <td>Flight Bookings</td>
+                    <td>Beauty, Toys</td>
+                    <td>Two Wheelers</td>
+                </tr>
+            </table>
+        </div>
+    </section><br>
+    <section>
+        <div class="slide">
+            <img src="https://rukminim2.flixcart.com/fk-p-flap/1600/270/image/4888eced2bba63f2.jpg?q=20">
+        </div>
+    </section>
+    <div class="text">
+        <p>Best of Electronics</p>
+    </div>
+    <section>
+        <div class="item">
+            <table>
+                <tr>
+                    <td><a target="_blank" href="file:///D:/Web%20designing/earbuds.html"><img src="D:\web image\10.PNG"></a></td>
+                    <td><a target="_blank" href="file:///D:/Web%20designing/watch.html"><img src="D:\web image\11.PNG"></a></td>
+                    <td><a target="_blank" href="file:///D:/Web%20designing/tv.html#00#"><img src="D:\web image\12.PNG"></a></td>
+                    <td><a target="_blank" href="file:///D:/Web%20designing/mob.html"><img src="D:\web image\36.PNG"></a></td>
+                    <td><a target="_blank" href="https://www.flipkart.com/pick-ur-needs-rechargeable-professional-hair-clipper-trimmer-barber-tool-led-display-6w-shaver-men/p/itmca0b68b2849ff?pid=SHVHY9JFTJQD4YCX&lid=LSTSHVHY9JFTJQD4YCXSX2OUH&marketplace=FLIPKART&q=shaver&store=zlw%2F79s%2Fu3j&srno=s_1_12&otracker=search&otracker1=search&fm=Search&iid=en_5pJqFx0NQzmNxcl_zMoAukeUvVNhKzKPZguvN1ZU-CXtaKVb0RyxMezNVJj2AjmattsRKSmUhFw3ly6-s6enRw%3D%3D&ppt=sp&ppn=sp&ssid=pzjkt7e5rk0000001726750742430&qH=15d5eb279ed6d770"><img src="D:\web image\14.PNG"></a></td>
+                </tr>
+                <tr>
+                    <td>Earbuds</td>
+                    <td>Smart Watch</td>
+                    <td>Monitor</td>
+                    <td>Mobile Phone</td>
+                    <td>Shaver</td>
+                </tr>
+            </table>
+        </div>
+    </section>
+    <div class="text2">
+        <p>Beauty, Food, Toys and More</p>
+    </div>
+    <section>
+        <div class="item2">
+            <table>
+                <tr>
+                    <td><a target="_blank" href="https://www.flipkart.com/fozzo-sk-new-batman-super-hero-dark-knight-action-figure-dc-movie-generic-model-7-inch/p/itm9c59ee69d77ca?pid=AFGHYB3FZHHVVKFW&lid=LSTAFGHYB3FZHHVVKFWFPT3BL&marketplace=FLIPKART&q=bat%2Cman&store=search.flipkart.com&srno=s_1_23&otracker=search&otracker1=search&fm=Search&iid=d0d9296f-f765-48b8-9446-2e4b1390918b.AFGHYB3FZHHVVKFW.SEARCH&ppt=sp&ppn=sp&ssid=zotuhnxt4w0000001727788506497&qH=d33c1c84110beae2"><img width="299px" height="300px" src="D:\web image\15.png"></a></td>
+                    <td><a target="_blank" href="https://www.flipkart.com/farmley-popular-california-almonds/p/itmad17a0f8c1581?pid=NDFFTG7UPDMPDHF7&lid=LSTNDFFTG7UPDMPDHF7OADQKI&marketplace=FLIPKART&q=almonds&store=eat%2Fltb%2Fngb&srno=s_1_4&otracker=search&otracker1=search&fm=Search&iid=4326ca18-e5fc-4a7e-84ef-036babe30f36.NDFFTG7UPDMPDHF7.SEARCH&ppt=sp&ppn=sp&ssid=vw12yiep6o0000001727788663305&qH=812ef74a32180ff8"><img width="299px" height="300px" src="D:\web image\16.png"></a></td>
+                    <td><a target="_blank" href="https://www.flipkart.com/search?q=cycle&otracker=search&otracker1=search&marketplace=FLIPKART&as-show=on&as=off"><img width="299px" height="300px" src="D:\web image\17.png"></a></td>
+                    <td><a target="_blank" href="https://www.flipkart.com/musical-works-sab-07-acoustic-guitar-tonewood-rosewood-right-hand-orientation/p/itm578c200de7618?pid=ACGH28JHFTCGVPFB&lid=LSTACGH28JHFTCGVPFBQUBEKX&marketplace=FLIPKART&q=guitar&store=ypu%2Fujd%2F7wz&srno=s_1_1&otracker=AS_QueryStore_OrganicAutoSuggest_1_7_sc_na_na&otracker1=AS_QueryStore_OrganicAutoSuggest_1_7_sc_na_na&fm=search-autosuggest&iid=en_LLb_-L_JkUkzjg_GdEPwHKBJmy0ergGhBFyNtS1iWdptavapJmK8C7Vxv1i9dA-gAWrDIrk-OnfrtE83J1QQbg%3D%3D&ppt=sp&ppn=sp&ssid=l96wxk7n7k0000001727788728882&qH=4c39e90d6a5c38a3"><img width="299px" height="300px" src="D:\web image\18.png"></a></td>
+                    <td><a target="_blank" href="https://www.flipkart.com/migwow-spiderman-crawling-action-toy-gift-pack-lights-sound-shooting-gun/p/itm579a1ef8f9436?pid=AFGGK9V8GRPZJQKE&lid=LSTAFGGK9V8GRPZJQKENAFVDE&marketplace=FLIPKART&q=spiderman+toy&store=tng&srno=s_1_13&otracker=search&otracker1=search&fm=Search&iid=f53de60f-58bc-4cc1-89c2-a405f6aa8485.AFGGK9V8GRPZJQKE.SEARCH&ppt=sp&ppn=sp&ssid=72hycsi4tc0000001727788755224&qH=6a9b4a1b8e3136be"><img width="250px" height="250px" src="D:\web image\20.png"></a></td>
+                </tr>
+                <tr>
+                    <td>Batman</td>
+                    <td>Almonds</td>
+                    <td>Cycle</td>
+                    <td>Guitar</td>
+                    <td>Spiderman</td>
+                </tr>
+            </table>
+        </div>
+    </section>
+    <div class="text3">
+        <p>Sports, Healthcare and more</p>
+    </div>
+    <section>
+        <div class="fash">
+            <table border="0px">
+                <tr>
+                    <td><a target="_blank" href="https://www.flipkart.com/myfitness-chocolate-peanut-butter-crunchy-510-g/p/itmaed3d4132479a?pid=JASGYW3MHCX7H5P4&lid=LSTJASGYW3MHCX7H5P4YSJNN0&marketplace=FLIPKART&q=peanutbutter&store=eat%2Fxhv&spotlightTagId=FkPickId_eat%2Fxhv&srno=s_1_3&otracker=AS_Query_OrganicAutoSuggest_2_5_na_na_na&otracker1=AS_Query_OrganicAutoSuggest_2_5_na_na_na&fm=search-autosuggest&iid=65863d4c-1410-4243-8fdd-83598f067cef.JASGYW3MHCX7H5P4.SEARCH&ppt=sp&ppn=sp&ssid=cikuse67ts0000001727788796470&qH=8f1f7aaf3e931f2b"><img width="299px" height="300px" src="D:\web image\21.png"></a></td>
+                    <td><a target="_blank" href="https://www.flipkart.com/nescafe-classic-coffee-powder-jar-100-pure-instant/p/itm9d7afcc2d9b32?pid=CFEERBCWS3EUU7AV&lid=LSTCFEERBCWS3EUU7AVPJ5BOS&marketplace=FLIPKART&q=escafe&store=eat%2Fdui&spotlightTagId=BestsellerId_eat%2Fdui&srno=s_1_4&otracker=search&otracker1=search&fm=Search&iid=63fd556c-e740-438e-9169-de03f2964188.CFEERBCWS3EUU7AV.SEARCH&ppt=sp&ppn=sp&ssid=aibrj109800000001727788817581&qH=f40fc0786c21ed49"><img width="299px" height="300px" src="D:\web image\22.png"></a></td>
+                    <td><a target="_blank" href="https://www.flipkart.com/aman-fit-2kg-x-4-3kg-4-combo-set-adjustable-dumbbell/p/itmca10fc35f5e05?pid=DBLGHG5CKHJUAEQ2&lid=LSTDBLGHG5CKHJUAEQ2RS8KJD&marketplace=FLIPKART&q=dumble&store=qoc%2Facb%2Fzuc&spotlightTagId=BestsellerId_qoc%2Facb%2Fzuc&srno=s_1_3&otracker=search&otracker1=search&fm=Search&iid=c1e082f2-8c3b-45d3-ae5a-c82499a7c63a.DBLGHG5CKHJUAEQ2.SEARCH&ppt=sp&ppn=sp&ssid=5b481hs9e80000001727788839598&qH=f88c6e1a8ca80303"><img width="299px" height="300px" src="D:\web image\23.png"></a></td>
+                    <td><a target="_blank" href="https://www.flipkart.com/fitkit-cultsport-cult-ft100m-3-25hp-peak-max-weight-110kg-12-preset-program-home-gym-treadmill/p/itmfbf233c9e22bb?pid=TRDFFHFYG8EDF8GC&lid=LSTTRDFFHFYG8EDF8GCJCHLAP&marketplace=FLIPKART&q=treadmill&store=qoc%2Famf%2Foyq&srno=s_1_1&otracker=search&otracker1=search&fm=Search&iid=en_3dVBsK2nMlju9PSGOnTy8cvCGRLuKOFfEy_2eK63HxfJnhUFLLikiACSJag5PyswgWVBh6IJEEinLPGJ00j4ZA%3D%3D&ppt=sp&ppn=sp&ssid=0r5pa54c3k0000001727788915997&qH=2fcb7283af9b4db9"><img width="299px" height="300px" src="D:\web image\24.png"></a></td>
+                    <td><a target="_blank" href="https://www.flipkart.com/ayuvya-i-gain-helps-gaining-weight-gainers-mass-gainers/p/itm3f461b328e257?pid=PSLGMMMSYH6AWWT8&lid=LSTPSLGMMMSYH6AWWT8MO8JUQ&marketplace=FLIPKART&q=protein&store=hlc%2Fetg%2F1rx&srno=s_1_1&otracker=search&otracker1=search&fm=Search&iid=en_0SS-y5B-ycmBlAYHSHrKFaOFR96Cjx6jWnFPYlUsXa1HF524UY7xnG6g68DfYcDZERirgYwr2fIh5FFsaUY4TA%3D%3D&ppt=sp&ppn=sp&ssid=eipl0afbq80000001727788935903&qH=6e6941c17eab8d61"><img width="250px" height="250px" src="D:\web image\25.png"></a></td>
+                </tr>
+                <tr>
+                    <td>Peanut Butter</td>
+                    <td>Nescafe</td>
+                    <td>Dumble</td>
+                    <td>Treadmill</td>
+                    <td>Protien</td>
+                </tr>
+        </table>
+        </div>
+    </section>
+    <div class="text4">
+        <p>Home Makeover Essentials</p>
+    </div>
+    <section>
+        <div class="fash2">
+            <table>
+                <tr>
+                    <td><a target="_blank" href="https://www.flipkart.com/nirlon-ceramic-2-piece-induction-base-cookware-kadai-casserole-set-lid-kadhai-24-cm-diameter-2-1-l-capacity/p/itmd36d261d210a6?pid=PTPGN7P8YD8BKYN9&lid=LSTPTPGN7P8YD8BKYN9OQTY4A&marketplace=FLIPKART&q=utencills&store=upp%2Ftnx&srno=s_1_1&otracker=search&otracker1=search&fm=Search&iid=70c227f1-5b9d-439b-9584-eb0c85439173.PTPGN7P8YD8BKYN9.SEARCH&ppt=sp&ppn=sp&ssid=xyrpyinbq80000001727788961422&qH=d3088f0fa62ebc54"><img width="299px" height="300px" src="D:\web image\26.png"></a></td>
+                    <td><a target="_blank" href="https://www.flipkart.com/dpm-led-temperature-display-indicator-water-hot-cool-500-ml-bottle/p/itm1c3da48998496?pid=BOTGB4CWUNY3BFPR&lid=LSTBOTGB4CWUNY3BFPRGZWTXY&marketplace=FLIPKART&q=bttle&store=upp%2F3t7&srno=s_1_1&otracker=search&otracker1=search&fm=Search&iid=en_goPkZcNv7Gif6iGmhwh3j-k7Yu-_1LETtEnGfco5GGuJx5DSC2s9TRCJLJjrYk_uuSjjT1lO0GXP-mx2ge2HdA%3D%3D&ppt=sp&ppn=sp&ssid=nnj3hjmdhc0000001727788982422&qH=d384a2b4cc184cd2"><img width="299px" height="300px" src="D:\web image\27.png"></a></td>
+                    <td><a target="_blank" href="https://www.flipkart.com/psa-plastic-round-flower-pots-home-planters-5-pcs-set-vase/p/itm84d8ad548f1e0?pid=VASH389SSCUPCGDD&lid=LSTVASH389SSCUPCGDDDL6ITN&marketplace=FLIPKART&q=flowerpot&store=arb%2Fg0v&srno=s_1_1&otracker=search&otracker1=search&fm=Search&iid=en_PWCd4mm_M7SipInTMS9nm1FlRxNXB9YOr4PWLYmmTkN1_o9eQ_2r7LQ944sPoIeAUnes3fjClkYX_JrAaWv2Ow%3D%3D&ppt=sp&ppn=sp&ssid=eqd1qvq5ds0000001727789004325&qH=aba0ef9e0ad0520d"><img width="299px" height="300px" src="D:\web image\28.png"></a></td>
+                    <td><a target="_blank" href="https://www.flipkart.com/greenchef-pearl-special-combo-2-l-3-5-l-outer-lid-induction-bottom-pressure-cooker/p/itm9aa87a1c00ad9?pid=PRCGDUYQDY77A9XV&lid=LSTPRCGDUYQDY77A9XVPPE5QZ&marketplace=FLIPKART&q=cooker&store=upp%2Ftnx%2Fgsl&srno=s_1_1&otracker=search&otracker1=search&fm=Search&iid=en_s1ayn8F-mQUnenRXRxyFwAuIGizvfscD68boOddQIceeggSzfru1JF2FBj8MlEb5Jgf3LHVtyfdpJryJV1JG7fUFjCTyOHoHZs-Z5_PS_w0%3D&ppt=sp&ppn=sp&ssid=ph2cmpsz6o0000001727789020624&qH=1872ecb7cbf5bbf4"><img width="299px" height="300px" src="D:\web image\29.png"></a></td>
+                    <td><a target="_blank" href="https://www.flipkart.com/convay-24-tea-stainless-steel-ice-spoon-coffee-cream-spoon-set/p/itme29fcab650ca2?pid=SPNGHYZ3GDJBHDUR&lid=LSTSPNGHYZ3GDJBHDUREV412C&marketplace=FLIPKART&q=spoon&store=upp&srno=s_1_4&otracker=search&otracker1=search&fm=Search&iid=4c31e5fa-e953-474b-be91-1ec8beaf0ca5.SPNGHYZ3GDJBHDUR.SEARCH&ppt=sp&ppn=sp&ssid=6flsd4ztcg0000001727789036875&qH=4b8e23084e0f4d55"><img width="250px" height="250px" src="D:\web image\30.png"></a></td>
+                </tr>
+                <tr>
+                    <td>Utensils</td>
+                    <td>Bottle</td>
+                    <td>Flower Pot</td>
+                    <td>Cooker</td>
+                    <td>Spoon</td>
+                </tr>
+            </table>
+        </div>
+    </section>
+    <div class="ftext">
+        <h1>Flipkart: The One-Stop Shopping Destination</h1>
+        <p>E-commerce is revolutionizing the way we all shop in India. Why do you want to hop from one store to another in search of the latest phone when you can find it on the Internet in a single click? Not only mobiles. Flipkart houses everything you can possibly imagine, from trending electronics like laptops, tablets, smartphones, and mobile accessories to in-vogue fashion staples like shoes, clothing and lifestyle accessories; from modern furniture like sofa sets, dining tables, and wardrobes to appliances that make your life easy like washing machines, TVs, ACs, mixer grinder juicers and other time-saving kitchen and small appliances; from home furnishings like cushion covers, mattresses and bedsheets to toys and musical instruments, we got them all covered. You name it, and you can stay assured about finding them all here. For those of you with erratic working hours, Flipkart is your best bet. Shop in your PJs, at night or in the wee hours of the morning. This e-commerce never shuts down. </p>
+        <h1>Flipkart Plus</h1>
+        <p>Shop for all your needs at the Best Price. The Best Lite for flipkart app is here to remind you about the Big Saving Sales and Offers. Now you will never miss the best shopping deals. Shop with lite for FK Shopping App and get best deals every day.
+            Log in to your Flipkart account.
+Go to the profile section.
+There you will find a 'Join Flipkart Plus ' option.
+After clicking on the option, an explore page will open.
+Scroll down on the explore page, and you will see a Super Coin bar with the membership validity date.Staying true to the customer-first promise, Flipkart revisited its earned loyalty program, Flipkart Plus, to take it one step further. With the introduction of Plus and Plus Premium, online shoppers can now get more value with every purchase on the platform.Customers will be eligible for Flipkart Plus membership by successfully completing 4 transactions in the past 365 days. Flipkart Plus benefits include: Earn additional supercoins on every purchase.Currently, you must have completed 4 successful transactions in the last 365 days to be eligible for Plus Program entry tier (Plus). If you have completed 8 successful transactions in the last 365 days, you will be eligible for Plus Premium.
+        </p>
+    </div><br>
+    <section>
+        <div class="footer">
+            <table>
+                <tr>
+                    <th>ABOUT</th>
+                    <th>GROUP COMPANIES</th>
+                    <th>HELP</th>
+                    <th>CONSUMER POLICY</th>
+                    <th>Mail Us</th>
+                    <th>Registered Office Address:</th>
+                </tr>
+                <tr>
+                    <td>Contact us</td>
+                    <td>Myntra</td>
+                    <td>Payments</td>
+                    <td>Cancellation</td>
+                    <td>Flipkart Internet Private Limited</td>
+                    <td>Flikart Internet Private Limited,</td>
+                </tr>
+                <tr>
+                    <td>About Us</td>
+                    <td>Cleartrip</td>
+                    <td>Shipping</td>
+                    <td>Terms Of Use</td>
+                    <td>Buildings Alyssa, Bengnia</td>
+                    <td>Buildings Alyssa, Begonia &</td>
+                </tr>
+                <tr>
+                    <td>Careers</td>
+                    <td>Shopsy</td>
+                    <td>Cancellation</td>
+                    <td>Security</td>
+                    <td>Clove Embassy Tech Village</td>
+                    <td>Clove Embassy Tech Village,</td>
+                </tr>
+                <tr>
+                    <td>Flipkart Stories</td>
+                    <td></td>
+                    <td>FAQ</td>
+                    <td>Privacy</td>
+                    <td>Outer Ring Tech Village</td>
+                    <td>Outer Embassy Tech Village,</td>
+                </tr>
+                <tr>
+                    <td>Press</td>
+                    <td></td>
+                    <td>Report</td>
+                    <td>Sitemap</td>
+                    <td>Bengaluru, 560103</td>
+                    <td>Bengaluru, 560103,</td>
+                </tr>
+                <tr>
+                    <td>Corporate</td>
+                    <td></td>
+                    <td></td>
+                    <td>EPR Compliance</td>
+                    <td>Karnataka, India</td>
+                    <td>Karnataka, India</td>
+                </tr>
+            </table>           
+            <hr>
+            <table>
+                <td>Become a Seller</td>
+                <td>Advertise</td>
+                <td>Gift Cards</td>
+                <td>Help Center</td>
+                <td>2007-2024 Flipkart.com</td>
+                <td><img width="200px" height="75px" src="D:\web image\31.png"></td>
+            </table>
+        </div>
+    </section>
+</body>
+</html>
